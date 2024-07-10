@@ -1,0 +1,554 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,5719.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Microsoft.Office.Interop.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Core.Activities.TextModifications</x:String>
+      <x:String>UiPath.Activities.System.Workflow.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="86">
+      <AssemblyReference>ColumnMapping</AssemblyReference>
+      <AssemblyReference>image_xlsxToppt</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Excel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>office</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Program" sap:VirtualizedContainerService.HintSize="806.4,5654.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
+      <Variable x:TypeArguments="s:Exception" Name="SystemException" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="Listworkweek" />
+      <Variable x:TypeArguments="x:String" Name="formFieldsOutputData" />
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="isDismissed" />
+      <Variable x:TypeArguments="njl:JObject" Name="formFieldsOutputJson" />
+      <Variable x:TypeArguments="x:String" Name="pptfilepath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings Workflow" sap:VirtualizedContainerService.HintSize="744,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings"}]</InArgument>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Listworkweek = new List&lt;String&gt;();&#xA;&#xA;for(int i = 1; i &lt;= 52; i++)&#xA;{&#xA;&#x9;Listworkweek.Add(i.ToString());&#xA;}" DisplayName="Invoke code &lt;Add workweek to List&gt;" sap:VirtualizedContainerService.HintSize="744,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_5" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="Listworkweek">[Listworkweek]</InOutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses Workflow" sap:VirtualizedContainerService.HintSize="744,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" FormFieldsInputData="{x:Null}" IconPath="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="e8c26421-1dd6-45e1-9dc8-eab0f36a3aef" DisableMaximizeButton="True" DisableMinimizeButton="True" DisableSanitize="True" Dismissed="[isDismissed]" DisplayName="Form &lt;NHK workweek&gt;" FormFieldsOutputData="[formFieldsOutputData]" FormHeight="450" FormSchema="%[{&quot;label&quot;:&quot;Please select work week to process&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;description&quot;:&quot;work week by number&quot;,&quot;tooltip&quot;:&quot;work week number auto by today&quot;,&quot;tableView&quot;:true,&quot;customDefaultValue&quot;:&quot;var oneJan = new Date(currentdate.getFullYear(),0,1);\r\nvar numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));\r\nvar result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);\r\nvalue = result;&quot;,&quot;validate&quot;:{&quot;required&quot;:true,&quot;onlyAvailableItems&quot;:true},&quot;key&quot;:&quot;Listworkweek&quot;,&quot;type&quot;:&quot;select&quot;,&quot;input&quot;:true},{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;1647317418354&quot;,&quot;Name&quot;:&quot;&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/lumen.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/lumen.png&quot;,&quot;OverrideCssUrl&quot;:&quot;&quot;,&quot;UserStyleOverrides&quot;:&quot;body , h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {\n                      font-family : Courier New !important;\n                    }table, .btn, .form-control {\n                      font-size : 15px !important;\n                     }h1 {\n                      font-size : 37px !important;\n                    }h2 {\n                      font-size : 31px !important;\n                    }h3 {\n                      font-size : 25px !important;\n                    }h4 {\n                      font-size : 19px !important;\n                    }h5 {\n                      font-size : 15px !important;\n                    }h6 {\n                      font-size : 13px !important;\n                    }body {\n      background:  #d1e7d7 !important;\n      font-size : 15px !important;\n      font-family : Courier New !important;\n      color : #181616 !important\n    } .panel-default {\n                        background:   !important;\n                        border-color :   !important;\n                      }\n                 .panel-default &gt; .panel-heading {\n                        background-color:  !important;\n                        color : #181616 !important\n                      }.btn-primary {\n                          background:  #158cba !important;\n                          border-color:  #127ba3 !important;\n                          color:  #ffffff !important;\n                      } .btn-primary:hover {\n                          background:  #158cba !important;\n                          color:  #ffffff !important;\n                      } .btn-default {\n                        background:   !important;\n                        border-color:   !important;\n                        color:   !important;\n                      } .btn-default:hover {\n                        background:   !important;\n                        color:   !important;\n                      } &quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:true,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormTitle="NHK - Select work week" FormWidth="450" GenerateInputFields="False" sap:VirtualizedContainerService.HintSize="744,142.4" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False" StartAsMinimized="False">
+      <ufa:FormActivity.Body>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+      </ufa:FormActivity.Body>
+      <ufa:FormActivity.DelayBody>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </ActivityAction>
+      </ufa:FormActivity.DelayBody>
+      <ufa:FormActivity.FormFieldsCollection>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Listworkweek_dropdown">[Listworkweek]</InArgument>
+      </ufa:FormActivity.FormFieldsCollection>
+    </ufa:FormActivity>
+    <If Condition="[isDismissed]" DisplayName="Is form close" sap:VirtualizedContainerService.HintSize="744,583.2" sap2010:WorkflowViewState.IdRef="If_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Close program" sap:VirtualizedContainerService.HintSize="496,393.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="Set exception" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:Exception">[new Exception("Program is closed by user")]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sendmail Workflow" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="SubProcess\Sendmail.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_Config">[Config]</InArgument>
+              <InArgument x:TypeArguments="s:Exception" x:Key="in_SystemException">[SystemException]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_mail_suject">["failed at " + Now.ToString("dd/MM/yyyy")]</InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_attach">[{}]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <Throw Exception="[SystemException]" sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="Throw_3" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Get work week from string output" sap:VirtualizedContainerService.HintSize="744,60.8" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[formFieldsOutputJson]" JsonString="[formFieldsOutputData]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:DeserializeJson>
+    <If Condition="[Directory.GetFiles(Config(&quot;QIP_Data_Path&quot;).ToString.Replace(&quot;{workweek}&quot;,formFieldsOutputJson(&quot;Listworkweek&quot;).ToString),&quot;*.xls*&quot;).Count &lt; 1]" DisplayName="If no file in folder to process" sap:VirtualizedContainerService.HintSize="744,583.2" sap2010:WorkflowViewState.IdRef="If_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Close program" sap:VirtualizedContainerService.HintSize="496,393.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="Set exception" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:Exception">[new Exception("No QIP data to process")]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sendmail Workflow" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="SubProcess\Sendmail.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_Config">[Config]</InArgument>
+              <InArgument x:TypeArguments="s:Exception" x:Key="in_SystemException">[SystemException]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_mail_suject">["failed at " + Now.ToString("dd/MM/yyyy")]</InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_attach">[{}]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <Throw Exception="[SystemException]" sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="Throw_4" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[Path.Combine(Config(&quot;OnProcess&quot;).ToString,Path.GetFileName(Config(&quot;QIP_template_Path&quot;).ToString))]" DisplayName="Copy Template" sap:VirtualizedContainerService.HintSize="744,160" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[Path.GetFullPath(Config(&quot;QIP_template_Path&quot;).ToString)]" />
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each &lt;Excel file&gt;" sap:VirtualizedContainerService.HintSize="744,2795.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Directory.GetFiles(Config(&quot;QIP_Data_Path&quot;).ToString.Replace(&quot;{workweek}&quot;,formFieldsOutputJson(&quot;Listworkweek&quot;).ToString),&quot;*.xls*&quot;)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="file" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Process get Data : Excel file" sap:VirtualizedContainerService.HintSize="708.8,2669.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:List(x:String)" Name="ListSheet" />
+              <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="For increment sheet when in each loop &lt;sheet&gt;" Name="Sheet_index" />
+              <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="For using in dictionary master" Name="keyfile" />
+              <Variable x:TypeArguments="scg:List(x:Int32)" Name="banlist" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="646.4,425.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <ui:MultipleAssign DisplayName="Modifies file name into keyfile for master" sap:VirtualizedContainerService.HintSize="430.4,194.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                  <ui:MultipleAssign.AssignOperations>
+                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">[keyfile]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">[Path.GetFileNameWithoutExtension(file)]</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">[keyfile]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">[keyfile.Substring(0,keyfile.IndexOf("Rev") - 1)]</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">[keyfile]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">[keyfile.Substring(keyfile.LastIndexOf("QIP") + 3).Trim]</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">[keyfile]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">[keyfile.Replace(" ","")]</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                    </scg:List>
+                  </ui:MultipleAssign.AssignOperations>
+                </ui:MultipleAssign>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="File Name has some problem" sap:VirtualizedContainerService.HintSize="496,387.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign DisplayName="Set Exception" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="s:Exception">[new Exception("QIP data filename is mismatch from master")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sendmail Workflow" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="SubProcess\Sendmail.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_Config">[Config]</InArgument>
+                          <InArgument x:TypeArguments="s:Exception" x:Key="in_SystemException">[SystemException]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_mail_suject">["failed at " + Now.ToString("dd/MM/yyyy")]</InArgument>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="in_attach">[{}]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <Throw Exception="[SystemException]" sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="// String PathExcel = @&quot;C:\Users\kittipong.kit\Documents\UiPath\TestPasteImage\QIP Weekly Report\QIP Data\Graph\WW_28\Graph performed QIP Iris 20.4 Rev.12 ww_28_OK.xls&quot;;&#xA;String PathExcel = in_pathExcel;&#xA;&#xA;Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();&#xA;excelApp.Visible = false;&#xA;&#xA;Microsoft.Office.Interop.Excel.Workbook sourceWB = excelApp.Workbooks.Open(PathExcel);&#xA;//Microsoft.Office.Interop.Excel.Worksheets sourceWS = (Microsoft.Office.Interop.Excel.Worksheets)sourceWB.Worksheets;&#xA;&#xA;out_ListSheet = new List&lt;String&gt;();&#xA;&#xA;foreach (Microsoft.Office.Interop.Excel.Worksheet worksheet in sourceWB.Worksheets)&#xA;{&#xA;&#x9;if (! worksheet.Name.Contains(&quot;Master&quot;)){&#xA;&#x9;&#x9;out_ListSheet.Add(worksheet.Name);&#xA;&#x9;}&#xA;}" DisplayName="Invoke code &lt;Get List of all Sheet : Excel&gt;" sap:VirtualizedContainerService.HintSize="646.4,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_9" Language="CSharp">
+              <ui:InvokeCode.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_pathExcel">[Path.GetFullPath(file)]</InArgument>
+                <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_ListSheet">[ListSheet]</OutArgument>
+              </ui:InvokeCode.Arguments>
+            </ui:InvokeCode>
+            <Assign DisplayName="Set banList Index" sap:VirtualizedContainerService.HintSize="646.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:List(x:Int32)">[banlist]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:List(x:Int32)">[new List(Of Int32)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[Sheet_index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="646.4,1449.6" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[ListSheet]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="sheet" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Process get Data : Sheet in Excel" sap:VirtualizedContainerService.HintSize="611.2,1324" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[not sheet.Contains(&quot;Master&quot;)]" DisplayName="Exclude master sheet" sap:VirtualizedContainerService.HintSize="548.8,1214.4" sap2010:WorkflowViewState.IdRef="If_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Iteration : Sheet in Excel" sap:VirtualizedContainerService.HintSize="513.6,1024.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="Sheet_page" />
+                            <Variable x:TypeArguments="x:Boolean" Name="notFound" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="String PathExcel = in_pathexcel;&#xA;String Sheetname = in_sheetname;&#xA;Microsoft.Office.Interop.Excel.Application excelApp;&#xA;Microsoft.Office.Interop.Excel.Workbook sourceWB;&#xA;&#xA;try&#xA;{&#xA;&#x9;excelApp = (Microsoft.Office.Interop.Excel.Application)Marshal.GetActiveObject(&quot;Excel.Application&quot;);&#xA;&#x9;excelApp.Visible = true;&#xA;&#x9;sourceWB = excelApp.ActiveWorkbook;&#xA;}&#xA;catch (COMException ex)&#xA;{&#xA;&#x9; excelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();&#xA;&#x9; excelApp.Visible = true;&#xA;&#x9; sourceWB = excelApp.Workbooks.Open(PathExcel);&#xA;}&#xA;&#xA;Microsoft.Office.Interop.Excel.Worksheet sourceWS = (Microsoft.Office.Interop.Excel.Worksheet)sourceWB.Sheets[Sheetname];&#xA;//sourceWS.Select(System.Type.Missing);&#xA;&#xA;System.Windows.Clipboard.Clear();&#xA;System.Threading.Thread.Sleep(300);&#xA;&#xA;Microsoft.Office.Interop.Excel.Shapes namesWB = (Microsoft.Office.Interop.Excel.Shapes)sourceWS.Shapes;&#xA;foreach (Microsoft.Office.Interop.Excel.Shape item in namesWB)&#xA;{&#xA;&#x9;if (item.Name.Contains(&quot;Group&quot;))&#xA;&#x9;{&#xA;&#x9;&#x9;do&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;item.Copy();&#xA;&#x9;&#x9;}while (System.Windows.Clipboard.ContainsImage() == null);&#xA;&#x9;&#x9;break;&#xA;&#x9;}&#xA;}" DisplayName="Invoke code &lt;Copy Image to Clipboard : Excel&gt;" sap:VirtualizedContainerService.HintSize="451.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_14" Language="CSharp">
+                            <ui:InvokeCode.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_pathexcel">[Path.GetFullPath(file)]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_sheetname">[sheet]</InArgument>
+                            </ui:InvokeCode.Arguments>
+                          </ui:InvokeCode>
+                          <Assign DisplayName="Assign Error exception : No Image" sap:VirtualizedContainerService.HintSize="451.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="s:Exception">[new exception("No Process on Image")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InterruptibleWhile Condition="[SystemException isnot Nothing]" DisplayName="While : Clipboard have image data" sap:VirtualizedContainerService.HintSize="451.2,332" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                            <ui:InterruptibleWhile.Body>
+                              <ui:InvokeCode ContinueOnError="{x:Null}" Code="string PathPowerPoint = in_pathPowerPoint;&#xD;&#xA;string sheetname = in_sheetname;&#xD;&#xA;int sheetpage = Convert.ToInt32(in_sheetpage) + 1;&#xD;&#xA;int lastpage = Convert.ToInt32(in_lastsheetpage);&#xD;&#xA;try&#xD;&#xA;{&#xD;&#xA;&#xD;&#xA;&#x9;Microsoft.Office.Interop.PowerPoint.Application ppApp;&#xD;&#xA;&#x9;Microsoft.Office.Interop.PowerPoint.Presentations presPP;&#xD;&#xA;&#x9;Microsoft.Office.Interop.PowerPoint.Presentation presP;&#xD;&#xA;&#xD;&#xA;&#x9;try&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;ppApp = (Microsoft.Office.Interop.PowerPoint.Application)Marshal.GetActiveObject(&quot;PowerPoint.Application&quot;);&#xD;&#xA;&#x9;&#x9;presPP = ppApp.Presentations;&#xD;&#xA;&#x9;&#x9;presP = ppApp.ActiveWindow.Presentation;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;catch (COMException ex)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;ppApp = new Microsoft.Office.Interop.PowerPoint.Application();&#xD;&#xA;&#x9;&#x9;presPP =  ppApp.Presentations;&#xD;&#xA;&#x9;&#x9;presP = presPP.Open(PathPowerPoint,Microsoft.Office.Core.MsoTriState.msoFalse,Microsoft.Office.Core.MsoTriState.msoFalse,Microsoft.Office.Core.MsoTriState.msoTrue);&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;Microsoft.Office.Interop.PowerPoint.Slide curslideP = presP.Slides[sheetpage];&#xD;&#xA;&#x9;foreach (var item in curslideP.Shapes)&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;var shape = (Microsoft.Office.Interop.PowerPoint.Shape)item;&#xD;&#xA;&#x9;&#x9;&#x9;if (shape.HasTextFrame == Microsoft.Office.Core.MsoTriState.msoTrue)&#xD;&#xA;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if(shape.TextFrame.HasText == Microsoft.Office.Core.MsoTriState.msoTrue)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if(shape.TextFrame.TextRange.Font.Name == &quot;Tahoma&quot;)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if(shape.TextFrame.TextRange.Text.ToUpper().Contains(in_sheetname.ToUpper()))&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;curslideP.Shapes.Paste();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;out_systemexception = null;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;out_notfound = false;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//curslideP.Shapes.PasteSpecial();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;else &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;out_notfound = true;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;out_systemexception = null;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;catch&#xD;&#xA;{&#xD;&#xA;&#x9;out_systemexception = new System.Exception(&quot;Error on paste image&quot;);&#xD;&#xA;}&#xD;&#xA;//Microsoft.Office.Interop.PowerPoint.Slide curslideP = (Microsoft.Office.Interop.PowerPoint.Slide)ppApp.ActiveWindow.View.Slide;" DisplayName="Invoke code &lt;Paste Image to PowerPoint&gt;" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_15" Language="CSharp">
+                                <ui:InvokeCode.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_pathPowerPoint">[Path.GetFullPath(Path.Combine(Config("OnProcess").ToString,Path.GetFileName(Config("QIP_template_Path").ToString)))]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_sheetpage">[(Cint(Config(keyfile).ToString.Split(";"c).First) + Sheet_index).ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_lastsheetpage">[(Cint(Config(keyfile).ToString.Split(";"c).Last)).ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_sheetname">[sheet]</InArgument>
+                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_notfound">[notFound]</OutArgument>
+                                  <OutArgument x:TypeArguments="s:Exception" x:Key="out_systemexception">[SystemException]</OutArgument>
+                                </ui:InvokeCode.Arguments>
+                              </ui:InvokeCode>
+                            </ui:InterruptibleWhile.Body>
+                          </ui:InterruptibleWhile>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,240.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,162.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <If Condition="[notFound]" DisplayName="If : Process on top got error" sap:VirtualizedContainerService.HintSize="353.6,52.8" sap2010:WorkflowViewState.IdRef="If_7">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If.Then>
+                                    <Sequence DisplayName="Process find" sap:VirtualizedContainerService.HintSize="513.6,872.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="451.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[sheet]" />
+                                      <Assign sap:VirtualizedContainerService.HintSize="451.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="s:Exception">[new exception("No Process on Image")]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ui:InterruptibleWhile Condition="[SystemException isnot Nothing]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,441.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                                        <ui:InterruptibleWhile.Body>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="416,274.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:InvokeCode ContinueOnError="{x:Null}" Code="string PathPowerPoint = in_pathPowerPoint;&#xA;string sheetname = in_sheetname;&#xA;int sheetpage = Convert.ToInt32(in_sheetpage) + 1;&#xA;int lastpage = Convert.ToInt32(in_lastsheetpage);&#xA;&#xA;try&#xA;{&#xA;Microsoft.Office.Interop.PowerPoint.Application ppApp;&#xA;Microsoft.Office.Interop.PowerPoint.Presentations presPP;&#xA;Microsoft.Office.Interop.PowerPoint.Presentation presP;&#xA;&#xA;try&#xA;{&#xA;&#x9;ppApp = (Microsoft.Office.Interop.PowerPoint.Application)Marshal.GetActiveObject(&quot;PowerPoint.Application&quot;);&#xA;&#x9;presPP = ppApp.Presentations;&#xA;&#x9;presP = ppApp.ActiveWindow.Presentation;&#xA;}&#xA;catch (COMException ex)&#xA;{&#xA;&#x9;ppApp = new Microsoft.Office.Interop.PowerPoint.Application();&#xA;&#x9;presPP =  ppApp.Presentations;&#xA;&#x9;presP = presPP.Open(PathPowerPoint,Microsoft.Office.Core.MsoTriState.msoFalse,Microsoft.Office.Core.MsoTriState.msoFalse,Microsoft.Office.Core.MsoTriState.msoTrue);&#xA;}&#xA;for(int i = sheetpage; i &lt;= lastpage; i++)&#xA;{&#xA;&#x9;Microsoft.Office.Interop.PowerPoint.Slide curslideP = presP.Slides[i];&#xA;&#x9;foreach (var item in curslideP.Shapes)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;var shape = (Microsoft.Office.Interop.PowerPoint.Shape)item;&#xA;&#x9;&#x9;&#x9;if (shape.HasTextFrame == Microsoft.Office.Core.MsoTriState.msoTrue)&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;if(shape.TextFrame.HasText == Microsoft.Office.Core.MsoTriState.msoTrue)&#xA;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if(shape.TextFrame.TextRange.Text.ToUpper().Contains(in_sheetname.ToUpper()))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;    banlist.Add(i);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;curslideP.Shapes.Paste();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;out_systemexception = null;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//presP.CommandBars.ExecuteMso(&quot;PasteSourceFormatting&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//do something&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;}&#xA;}&#xA;catch&#xA;{&#xA;&#x9;out_systemexception = new System.Exception(&quot;Error on paste image&quot;);&#xA;}&#xA;//Microsoft.Office.Interop.PowerPoint.Slide curslideP = (Microsoft.Office.Interop.PowerPoint.Slide)ppApp.ActiveWindow.View.Slide;&#xA;" DisplayName="Invoke code &lt;Find and Paste Image to PowerPoint&gt;" sap:VirtualizedContainerService.HintSize="353.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_16" Language="CSharp">
+                                              <ui:InvokeCode.Arguments>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_pathPowerPoint">[Path.GetFullPath(Path.Combine(Config("OnProcess").ToString,Path.GetFileName(Config("QIP_template_Path").ToString)))]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_sheetpage">[(Cint(Config(keyfile).ToString.Split(";"c).First)).ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_lastsheetpage">[(Cint(Config(keyfile).ToString.Split(";"c).Last)).ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_sheetname">[sheet]</InArgument>
+                                                <OutArgument x:TypeArguments="x:Boolean" x:Key="out_notfound">[notFound]</OutArgument>
+                                                <InOutArgument x:TypeArguments="scg:List(x:Int32)" x:Key="banlist">[banlist]</InOutArgument>
+                                                <OutArgument x:TypeArguments="s:Exception" x:Key="out_systemexception">[SystemException]</OutArgument>
+                                              </ui:InvokeCode.Arguments>
+                                            </ui:InvokeCode>
+                                          </Sequence>
+                                        </ui:InterruptibleWhile.Body>
+                                      </ui:InterruptibleWhile>
+                                      <Assign sap:VirtualizedContainerService.HintSize="451.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Boolean">[notFound]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </If.Then>
+                                </If>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="String PathExcel = in_pathexcel;&#xA;Microsoft.Office.Interop.Excel.Application excelApp;&#xA;Microsoft.Office.Interop.Excel.Workbook sourceWB;&#xA;&#xA;try&#xA;{&#xA;&#x9;excelApp = (Microsoft.Office.Interop.Excel.Application)Marshal.GetActiveObject(&quot;Excel.Application&quot;);&#xA;&#x9;excelApp.Visible = true;&#xA;&#x9;sourceWB = excelApp.ActiveWorkbook;&#xA;&#x9;&#xA;&#x9;sourceWB.Close();&#xA;&#x9;excelApp.Quit();&#xA;}&#xA;catch (COMException ex)&#xA;{&#xA;&#xA;}" DisplayName="Invoke code &lt;Close : Excel&gt;" sap:VirtualizedContainerService.HintSize="646.4,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_12" Language="CSharp">
+              <ui:InvokeCode.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_pathexcel">[Path.GetFullPath(file)]</InArgument>
+              </ui:InvokeCode.Arguments>
+            </ui:InvokeCode>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses Workflow" sap:VirtualizedContainerService.HintSize="646.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+    <Assign DisplayName="Set path and file name" sap:VirtualizedContainerService.HintSize="744,81.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[pptfilepath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Path.Combine(Config("QIP_save_as_path").ToString,Config("QIP_file_name").ToString.Replace("[date]",now.ToString("dd-MM-yy") + "_" + formFieldsOutputJson("Listworkweek").ToString) + Path.GetExtension(Config("QIP_template_Path").ToString))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="add path and file name to config" sap:VirtualizedContainerService.HintSize="744,81.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Object">[Config("pptfilepath")]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Object">[pptfilepath]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="string PathPowerPoint = in_pathPowerPoint;&#xA;string Filename = in_filename;&#xA;string workweek = in_workweek;&#xA;&#xA;Microsoft.Office.Interop.PowerPoint.Application ppApp;&#xA;Microsoft.Office.Interop.PowerPoint.Presentation presP;&#xA;&#xA;try&#xA;{&#xA;&#x9;ppApp = (Microsoft.Office.Interop.PowerPoint.Application)Marshal.GetActiveObject(&quot;PowerPoint.Application&quot;);&#xA;&#x9;presP = ppApp.ActiveWindow.Presentation;&#xA;&#x9;&#xA;&#x9;//Edit workweek&#xA;&#x9;Microsoft.Office.Interop.PowerPoint.Slide curslideP = presP.Slides[1];&#xA;&#x9;foreach (var item in curslideP.Shapes)&#xA;&#x9;{&#xA;&#x9;&#x9;var shape = (Microsoft.Office.Interop.PowerPoint.Shape)item;&#xA;&#x9;&#x9;if (shape.HasTextFrame == Microsoft.Office.Core.MsoTriState.msoTrue)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;if(shape.TextFrame.HasText == Microsoft.Office.Core.MsoTriState.msoTrue)&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;shape.TextFrame.TextRange.Replace(&quot;__&quot;, workweek);&#xA;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#x9;//Save file&#xA;&#x9;presP.SaveAs(Filename,Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault,Microsoft.Office.Core.MsoTriState.msoTrue);&#xA;&#x9;//presP.Save();&#xA;&#x9;&#xA;&#x9;presP.Close();&#xA;&#x9;ppApp.Quit();&#xA;&#x9;Marshal.FinalReleaseComObject(ppApp);&#xA;}&#xA;catch (COMException ex)&#xA;{&#xA;&#x9;out_systemException = ex;&#xA;}" DisplayName="Invoke code &lt;Save as PowerPoint and close&gt;" sap:VirtualizedContainerService.HintSize="744,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_11" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_pathPowerPoint">[Path.GetFullPath(Path.Combine(Config("OnProcess").ToString,Path.GetFileName(Config("QIP_template_Path").ToString)))]</InArgument>
+        <OutArgument x:TypeArguments="s:Exception" x:Key="out_systemException">[SystemException]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_filename">[pptfilepath]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_workweek">[formFieldsOutputJson("Listworkweek").ToString]</InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sendmail Workflow" sap:VirtualizedContainerService.HintSize="744,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SubProcess\Sendmail.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_dict_Config">[Config]</InArgument>
+        <InArgument x:TypeArguments="s:Exception" x:Key="in_SystemException">[SystemException]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_mail_suject">["sucess with file : " + Path.GetFileName(pptfilepath) + " workweek " + formFieldsOutputJson("Listworkweek").ToString]</InArgument>
+        <InArgument x:TypeArguments="s:String[]" x:Key="in_attach">[{}]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
