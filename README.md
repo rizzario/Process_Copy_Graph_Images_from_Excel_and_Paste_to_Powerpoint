@@ -10,4 +10,4 @@
 ---
 ### More files for knowledge :
 WI Manual : <a href="QIP Weekly Report/WI weekly QIP report.xlsx">Excel file</a>\
-Video : <iframe src="https://drive.google.com/file/d/1eISMyxwfqbFnurdJ6DFdwvv0LIMG3w84/preview" width="640" height="480"></iframe>
+Video : <a href="https://drive.google.com/file/d/1eISMyxwfqbFnurdJ6DFdwvv0LIMG3w84/preview">Google drive</a>
